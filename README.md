@@ -10,6 +10,10 @@ Faça um **Fork** deste repositório e efetue suas implementações da forma que
 
 Ao concluir, compacte seu projeto em um arquivo zip e responda o email com ele anexado.
 
+## Prazo de entrega
+
+Você terá até dia 08/09/2020 para nos enviar suas atividades.
+
 Boa sorte!
 
 
