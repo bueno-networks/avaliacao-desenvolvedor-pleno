@@ -40,7 +40,7 @@ CREATE TABLE `fornecedores` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO fornecedores (id,nome)
+INSERT INTO fornecedores (id,nome) VALUES
 (1,'Épol'),
 (2,'Semsunga'),
 (3,'Déu');
@@ -56,12 +56,12 @@ CREATE TABLE `pedidos` (
   `loja_id` int(10) unsigned NOT NULL,
   `fornecedor_id` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `pedidos_FK_1` (`usuario_id`),
-  KEY `pedidos_FK_2` (`loja_id`),
-  KEY `pedidos_FK_3` (`fornecedor_id`),
-  CONSTRAINT `pedidos_FK` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`),
-  CONSTRAINT `pedidos_FK_1` FOREIGN KEY (`loja_id`) REFERENCES `lojas` (`id`),
-  CONSTRAINT `pedidos_FK_2` FOREIGN KEY (`fornecedor_id`) REFERENCES `fornecedor` (`id`)
+  KEY `pedidos_IDX_1` (`usuario_id`),
+  KEY `pedidos_IDX_2` (`loja_id`),
+  KEY `pedidos_IDX_3` (`fornecedor_id`),
+  CONSTRAINT `pedidos_FK_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`),
+  CONSTRAINT `pedidos_FK_2` FOREIGN KEY (`loja_id`) REFERENCES `lojas` (`id`),
+  CONSTRAINT `pedidos_FK_3` FOREIGN KEY (`fornecedor_id`) REFERENCES `fornecedores` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO pedidos 
